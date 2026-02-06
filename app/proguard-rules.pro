@@ -19,3 +19,9 @@
 # If you keep the line number information, uncomment this to
 # hide the original source file name.
 #-renamesourcefileattribute SourceFile
+
+        # Or, more generally for all activities:
+        -keep public class * extends android.app.Activity
+        -keep public class * extends androidx.appcompat.app.AppCompatActivity
+        -keep public class * extends androidx.fragment.app.FragmentActivity
+        # Add others if you use different base activity classes

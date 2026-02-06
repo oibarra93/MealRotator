@@ -1,0 +1,21 @@
+<!-- res/navigation/nav_graph.xml -->
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/nav_meals">
+
+    <fragment
+        android:id="@+id/nav_meals"
+        android:name="com.oscaribarra.mealrotator.activities.MainActivity"
+        android:label="My Meals"/>
+
+    <fragment
+        android:id="@+id/nav_schedule"
+        android:name="com.oscaribarra.mealrotator.activities.ScheduleActivity"
+        android:label="Weekly Schedule"/>
+
+    <fragment
+        android:id="@+id/nav_settings"
+        android:name="com.oscaribarra.mealrotator.activities.SettingsActivity"
+        android:label="Settings"/>
+</navigation>

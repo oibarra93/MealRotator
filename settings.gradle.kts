@@ -19,6 +19,6 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "Ibarra Meal Prep"
+rootProject.name = "Meal Rotator"
 include(":app")
  

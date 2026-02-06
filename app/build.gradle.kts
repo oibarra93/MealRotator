@@ -1,18 +1,17 @@
 plugins {
-    id("com.google.devtools.ksp") version "2.1.21-2.0.1"
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.android)
     alias(libs.plugins.kotlin.compose)
-    alias(libs.plugins.google.android.libraries.mapsplatform.secrets.gradle.plugin)
+    kotlin("kapt") version "2.1.21"
 }
 
 android {
-    namespace = "com.oscaribarra.ibarramealprep"
+    namespace = "com.oscaribarra.mealrotator"
     compileSdk = 35
 
     defaultConfig {
-        applicationId = "com.oscaribarra.ibarramealprep"
-        minSdk = 24
+        applicationId = "com.oscaribarra.mealrotator"
+        minSdk = 25
         targetSdk = 35
         versionCode = 1
         versionName = "1.0"
@@ -38,35 +37,42 @@ android {
     }
     buildFeatures {
         compose = true
-        buildConfig = true
+        viewBinding = true
     }
 }
 
 dependencies {
 
-    implementation(libs.androidx.preference.ktx)
-    implementation(libs.dagger.compiler)
-    ksp(libs.dagger.compiler)
+    implementation(libs.material)
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.lifecycle.runtime.ktx)
-    implementation(libs.androidx.lifecycle.viewmodel.compose)
     implementation(libs.androidx.activity.compose)
     implementation(platform(libs.androidx.compose.bom))
     implementation(libs.androidx.ui)
     implementation(libs.androidx.ui.graphics)
     implementation(libs.androidx.ui.tooling.preview)
     implementation(libs.androidx.material3)
-    implementation(libs.generativeai)
-    implementation(libs.ui) // Check for the latest version
-    implementation(libs.material3) // Check for the latest version
-    implementation(libs.ui.tooling.preview) // For previews
-    implementation(libs.androidx.navigation.compose) // Check for the latest version
-    implementation(libs.androidx.room.runtime) // Check for the latest version
-    ksp(libs.androidx.room.compiler)
-    implementation(libs.androidx.room.ktx) // For Kotlin Coroutines support
-    implementation(libs.androidx.lifecycle.viewmodel.compose.v270) // Check for the latest version
-    implementation(libs.kotlinx.coroutines.android) // Check for the latest version
-    debugImplementation(libs.ui.tooling)
+    implementation(libs.androidx.room.runtime.android)
+    implementation(libs.androidx.appcompat)
+    implementation(libs.androidx.recyclerview)
+    implementation(libs.androidx.material3)
+
+    implementation(libs.androidx.core.ktx.v1120)
+    implementation(libs.androidx.appcompat.v161)
+    implementation(libs.material.v1110)
+    implementation(libs.androidx.constraintlayout)
+    implementation(libs.androidx.recyclerview.v132)
+    implementation(libs.androidx.lifecycle.runtime.ktx.v270)
+
+    implementation(libs.gson)
+    // Room database
+    implementation(libs.androidx.room.runtime)
+    kapt(libs.androidx.room.compiler)
+    implementation(libs.androidx.room.ktx)
+
+    implementation(libs.androidx.navigation.fragment.ktx)
+    implementation(libs.androidx.navigation.ui.ktx)
+
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)

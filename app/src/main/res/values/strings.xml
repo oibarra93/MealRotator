@@ -1,11 +1,26 @@
 <resources>
-    <string name="app_name">Ibarra Meal Prep</string>
-    <string name="action_go">Go</string>
-    <string name="baking_title">Baking with Gemini</string>
-    <string name="label_prompt">Prompt</string>
-    <string name="prompt_placeholder">Provide a recipe for the baked goods in the image</string>
-    <string name="image1_description">Cupcake</string>
-    <string name="image2_description">Cookies</string>
-    <string name="image3_description">Cake</string>
-    <string name="results_placeholder">(Results will appear here)</string>
+    <string name="app_name">Meal Rotation</string>
+    <string name="no_meals_message">No meals yet. Tap + to add one!</string>
+    <string name="meal_name_hint">Meal Name</string>
+    <string name="recipe_name_hint">Recipe Name</string>
+    <string name="ingredients_hint">Ingredients (one per line, format: amount|name)</string>
+    <string name="instructions_hint">Instructions</string>
+    <string name="save_button">Save Meal</string>
+    <string name="ingredients_label">Ingredients</string>
+    <string name="instructions_label">Instructions</string>
+    <string name="todo">TODO</string>
+    <string name="instructions">Instructions</string>
+    <string name="ingredients">Ingredients</string>
+    <string name="add">Add</string>
+    <string name="delete_meal">Delete Meal</string>
+    <string name="generate_weekly_schedule">Generate Weekly Schedule</string>
+    <string name="save_schedule">Save Schedule</string>
+    <string name="meal_rotator">Meal Rotator</string>
+    <string name="your_weekly_meal_planner">Your weekly meal planner</string>
+    <string name="add_meal">Add Meal</string>
+    <string name="open_navigation">Open Navigation</string>
+    <string name="no_meal_scheduled">No meal scheduled</string>
+    <string name="grocery_checklist">Grocery checklist</string>
+    <string name="share">Share</string>
+    <string name="meals_this_week">Meals this week</string>
 </resources>
